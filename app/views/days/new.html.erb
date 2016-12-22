@@ -1,0 +1,29 @@
+<div class="blue">
+  <div class="row vdivide">
+    <div class="col-md-6 top">
+      <img id="employeePic" src= <%= current_user.employeePic %> class="center-block img-circle profilePic">
+      <h1 class="text-center txt">
+        <%= current_user.name %>
+      </h1>
+    </div>
+    <div class="col-md-6 top">
+        <h1 class="text-center daysRemaining txt">
+
+          <%= @day.daysLeft %>
+
+        </h1>
+      <h1 class="text-center txt">
+        Days Remaining
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <br><br>
+      <h1 class="text-center txt">REQUEST DAYS</h1>
+      <br>
+      <%= render 'daysForm' %>
+      <br><br><br>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<h1 class="text-center">Days Taken - Admin View</h1>
+  <div class="dropdown center-block">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Pick Employee
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <% @users.each do |f| %>
+
+      <li><%= link_to f.name, adminShow_days_path(user_id:f.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+  <%= render 'table' %>

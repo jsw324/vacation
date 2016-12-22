@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Vacation</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <title>Tallience | Vacation Tracker</title>
+  <%= render 'layouts/rails_default' %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
+  <%= render 'layouts/header' %>
+  <div class="container-fluid">
+    <div class="row">
+    <img src="https://trademarks.justia.com/media/image.php?serial=85149721" class="img-responive  center-block">
+    </div>
+    <!-- from Devise tutorial https://www.sitepoint.com/devise-authentication-in-depth/ -->
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+    <% end %>
 
-<%= yield %>
+  <%= yield %>
+  </div>
+  <!-- yield top content from Devise tutorial -->
 
-</body>
-</html>
+  <%= yield :top_content %>
+  <%= render 'layouts/footer' %>

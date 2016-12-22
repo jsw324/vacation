@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="jumbotron hero-unit jmbotxt text-center">
+    <h1>Track your vacation days</h1>
+    <h2>
+      Use this app to submit requests for vacation and track how many days you have left.
+    </h2>
+
+    <br>
+    <% if user_signed_in? %>
+      <%= link_to "Track PTO", new_day_path, class: 'btn btn-primary btn-lg' %>
+    <% else %>
+      <%=  link_to "Log in", new_user_session_path, class: 'btn btn-primary btn-lg' %>
+    <% end %>
+    <br><br>
+    <h3>
+      #TeamTallience - Thank you for all your hard work and dedication.
+    </h3>
+  </div>
+</div>
